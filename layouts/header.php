@@ -26,9 +26,9 @@
                     <!---other navbar links ---->
                     <li><a href="index.php">Home</a></li>
                     <li><a class="active" href="shop.php">Shop</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html">About </a></li>
                     <li><a href="login.php">Account</a></li>
-                    <li><a href="cart.html" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                    <li><a href="cart.php" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </section>

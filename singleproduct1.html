@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafix Print Hub</title>
+    <script src="https://kit.fontawesome.com/2c5544bbf4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" async></script>
+
+</head>
+    <body>
+        <!---navbar section---->
+         <section id="header">
+
+            <!---navbar logo---->
+            <a href="home.html"><img src="Pictures/Logo.png" class="logo" alt=""></a>
+
+            <div>
+                <ul id="navbar">
+
+                    <!---other navbar links ---->
+                    <li><a href="home.html">Home</a></li>
+                    <li><a class="active" href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="login.php">Account</a></li>
+                    <li><a href="cart.html" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+         </section>
+
+
+
+
+
+         <!----product deatils section--->
+         <section id="product_details" class="left-section">
+            <div class="single-pro-image">
+                <img src="Pictures/billboard.jpg" width="100%" id="Main-image" alt="">
+            </div>
+
+            <div class="single_pdetails" data-price="18000">
+                <h1 id="product-name">Billboard.</h1>
+                <h2 id="Price">Rs. 18000</h2>      
+    
+                <input type="number" id="quantity" value="1" min="1" onchange="updatePrice()">
+                <button class="productPGbutton">Add to Cart</button>
+                <h3>Product Details.</h3>
+                <span> A standard size of 12X6ft board. For high-impact billboards any type of design can be printed within the billboard dimension. Payment also includes installations fees. 
+                    For design specifications, our customer service will be in touch once the product is ordered.</span>
+            </div>
+
+         </section>
+
+
+        <br><br>
+
+        <!----other product conatiners section--->
+        <section id="product1-shop" class="section1-shop">
+
+            <div class="section1-head">
+                <h1>Other Services.</h1>
+            </div>
+
+            <!----product conatiner 1--->
+            <div class="pro-container-shop">
+                <a href="singleproduct1.html">
+                    <div class="pro-shop">
+                        <h1>Billboards</h1><br>
+                        <img src="Pictures/billboard.jpg" alt="">
+                        <br><br>
+                        <div class="des-shop">
+                            <span>Standard Size Billboard</span>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <h3>Price: Rs.18000</h3>
+                        <i class="fa fa-shopping-cart shopPGcart"></i>
+                    </div>
+                </a>
+
+                <!----product conatiner 2--->
+                <a href="singleproduct2.html">
+                    <div class="pro-shop">
+                        <h1>Business Signage</h1><br>
+                        <img src="Pictures/businesssignage.jpg" alt="">
+                        <br><br>
+                        <div class="des-shop">
+                            <span>Standard Size Business Signage</span>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <h3>Price: Rs.8000</h3>
+                        <i class="fa fa-shopping-cart shopPGcart"></i>
+                    </div>
+                </a>
+
+                <!----product conatiner 3--->
+                <a href="singleproduct3.html">
+                    <div class="pro-shop">
+                        <h1>Digital Display Boards</h1><br>
+                        <img src="Pictures/digitaldisplay.jpeg" alt="">
+                        <br><br>
+                        <div class="des-shop">
+                            <span>Standard Size Digital Display Baord</span>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <h3>Price: Rs.10000</h3>
+                        <i class="fa fa-shopping-cart shopPGcart"></i>
+                    </div>
+                </a>
+                
+                <!----product conatiner 4--->
+                <a href="singleproduct4.html">
+                    <div class="pro-shop">
+                        <h1>Name boards</h1><br>
+                        <img src="Pictures/nameboards.jpg" alt="">
+                        <br><br>
+                        <div class="des-shop">
+                            <span>Standard Size Name Boards</span>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <h3>Price: Rs.3800</h3>
+                        <i class="fa fa-shopping-cart shopPGcart"></i>
+                    </div>
+                </a>
+                
+                <!----product conatiner 5--->
+                <a href="singleproduct5.html">
+                    <div class="pro-shop">
+                        <h1>Vehicle Branding</h1><br>
+                        <img src="Pictures/vehiclebranding.jpg" alt="">
+                        <br><br>
+                        <div class="des-shop">
+                            <span>Full Vehicle Branding</span>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <h3>Price: Rs.12000</h3>
+                        <i class="fa fa-shopping-cart shopPGcart"></i>
+                    </div>
+                </a>
+
+                <!----product conatiner 6--->
+                <a href="singleproduct6.html">
+                    <div class="pro-shop">
+                        <h1>Banners</h1><br>
+                        <img src="Pictures/banners.jpg" alt="">
+                        <br><br>
+                        <div class="des-shop">
+                            <span>Standard Size Banners</span>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                        <h3>Price: Rs.6500</h3>
+                        <i class="fa fa-shopping-cart shopPGcart"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+ 
+
+        <!-- footer section -->
+        <footer class="footer1">
+
+            <!-- footer column 1 -->
+            <div class="col1">
+                <h1>Grafix <span>Adz</span></h1>
+                <p class="footerlinks">
+                    <a href="home.html">Home</a>
+                    |
+                    <a href="shop.html">Shop</a>
+                    |
+                    <a href="about.html">About</a>
+                    |
+                    <a href="login.html">Account</a>
+                    |
+                    <a href="cart.html" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                </p>
+
+                <p class="footer-companyname">Copyright ⓒ 2024 <strong>GrafixAdz</strong> All Rights Reserved</p>
+                <br><P class="tc"><a href="t&c.html">Click here to view our T&C.<a></a></p>
+            </div>
+
+            <!-- footer column 2 -->
+            <div class="col2">
+                <div>
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <p><span>Grafix, Negombo, Sri Lanka</span></p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <p><span>+94 71 424 6551</span></p>
+                </div>
+            </div>
+
+            <!-- footer column 3 -->
+            <div class="col3">
+                <p class="companyabout">
+                    <span>Stay Connected</span> Follow us on social media to keep up 
+                    with our latest projects, news, and special offers.
+                </p>
+                
+                <div class="footericons">
+                    <a href="https://www.facebook.com/p/Grafix-100066480171516/?_rdr"><i class="fa fa-facebook"></i></a>
+                </div>
+
+            </div>
+        </footer>
+    </body>
+</html>

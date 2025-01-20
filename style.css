@@ -1,0 +1,1248 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap'); 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+   width: 100%; 
+}
+
+/**styles for the logo on the navbar*/
+.logo {
+    max-width: 75%;
+    align-items: center;
+}
+
+/*Styles for the navbar*/
+#header{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0.001px 35px;
+    background: #bf9de8;
+    box-shadow: 0 5px 15px rgba(0,0,0, 0.7);
+    z-index: 5;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; /*overlaps the navbar above other content*/
+}
+
+/*Lists within the navbar*/
+#navbar li{
+    list-style: none;
+    padding: 10px 75px;
+    position: relative;
+
+}
+
+#navbar li a{
+    text-decoration: none; /*Removes any default text decorations for links*/
+    font-size: 15px;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+/*Hover effects for the navbar*/
+#navbar li a:hover,
+#navbar li a.active {
+    color: #4203a8;
+} 
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 15%;
+    height: 3px;
+    background: #4203a8 ;
+    position: absolute;
+    bottom: 1px;
+    left: 75px;
+}
+
+/*gradient background styles*/
+.backgroundimage{
+    position: relative;
+    background: linear-gradient(to right, rgb(159, 107, 212), rgb(233, 225, 241));
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+/*image on top of the gradient */
+.backgroundimage::before{
+    content: "";
+    position:absolute;
+    top: -9.7%;
+    left: 0;
+    right: 16%;
+    bottom: 10%;
+    background-image: url("Pictures/homepic.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    opacity: 12;
+    z-index: 1;
+}
+
+/*Home page section styles*/
+#homepg{
+    position: absolute;
+    top: 55%;
+    left: 68.5%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 2;
+}
+
+/*Styles for the texts*/
+#homepg h1{
+    font-size: 33.7px;
+    text-align: left;
+    text-shadow: #bf9de8;
+    margin-top: 10%;
+}
+#homepg h2{
+    color: #6835bb;
+    font-size: 24.5px;
+    text-align: center;
+    
+}
+#homepg p{
+    color: #2f086e;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+/*styles for the Button on the home page*/
+.Homebutton{
+    background-image: url("Pictures/buttonback.png");
+    background-color: transparent;
+    background-size: contain;
+    background-position:center;
+    text-align: center;
+    color: azure;
+    border: 0;
+    padding: 40px 70px 40px 60px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500px;
+    transition: opacity 1;
+    text-decoration: none;
+}
+
+button:hover {
+    opacity: 0.5; /*Hover effect for the button*/
+}
+
+/*Features product section styles*/
+.section1-head h1{
+    font-size: 32.5px;
+    margin-bottom: 10px;
+}
+.section1-head h2{
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #4203a8;
+}
+.section1-head h3{
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #6612ed;
+}
+
+/*Slide show images styles*/
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container img{
+    width: 100%;                 
+    height: auto;               
+    object-fit: cover;           
+    max-height: auto; 
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  max-height: 438px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*Product container styles*/
+#product1{
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+#product1 .pro-container {
+    display: grid;  /*Aligns the div boxes in a grid*/
+    grid-template-columns: 1fr 1fr 1fr; /*Aligns the div boxes in a grid*/
+    place-content: center;
+    padding-top: 20px ;
+    margin: 0 auto;
+}
+
+/*Styles for the product boxes*/
+#product1 .pro {
+    width: 24%;
+    min-width: 350px; 
+    padding: 10px 12px;
+    border: 1px solid #2f086e;
+    border-radius: 25px;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.1);
+    margin: 30px;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(171, 62, 238, 0.269); /*Prodcut bpx hover effect*/
+}
+/*Sizes for the picture in the product box*/
+#product1 .pro img{
+    width: 300px;
+    height: 230px;
+   border-radius: 30px;
+}
+
+/*Product box text styles*/
+.pro h1{
+    text-align: center;
+    font-size: 22px;
+    color: #251c32;
+    margin: 0;
+}
+
+#product1 .des p{
+    text-align: center;
+    font-size: 15px;
+    font-family: cursive;
+    color: #4203a8;
+    margin: 0;
+}
+
+/*Styles for the footer*/
+.footer1{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #b68ef7;
+    padding: 5px 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;   /*footer will take the full width of the page*/
+    widows: 50%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 40px 40px 45px;
+    line-height: 1;
+}
+
+/*Styles for the three columns of the footer*/
+.footer1 .col1, .footer1 .col2, .footer1 .col3{
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+}
+
+/*Text edits for the first column*/
+.footer1 h1{
+    color: #ffff;
+    font: normal 36px, 'cookie', cursive;
+    margin-top: 10px 15px;
+}
+
+.footer1 h1 span{
+    color: azure;
+}
+
+.footer1 .footerlinks{
+    columns: #fff;
+    margin: 20px 0 12px;
+}
+
+.footer1 .footerlinks a{
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer1 .footer-companyname{
+    color: #000000;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/*Terms and condition link styles*/
+.tc a{
+    font-size: 13px;
+    text-decoration: none;
+    font-style: normal;
+    color: #4d04c3;
+    cursor: pointer;
+}
+
+/*Hover effect for the TC text in footer*/
+.tc a:hover{
+    font-size: 16px; 
+    color: #ffffff;
+}
+
+/*Footer column 2 icon styles*/
+.footer1 .col2 i{
+    background-color: #ffffff;
+    color: #5b09df;
+    font-size: 25px;
+    width: 43px;
+    height: 43px;
+    border-radius: 60%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+/*Column 2 text styles*/
+.footer1 .col2 p{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer1 .col2 p span{
+    display: block;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.footer1 .col2{
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer1 .companyabout{
+    line-height: 20px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer1 .companyabout span{
+    display: block;
+    color: #1a1a1a;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/*Styles for the facebook icon*/
+.footer1 .footericons{
+    margin-top: 25px;
+}
+
+.footer1 .footericons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-size: 20px;
+    color: #5b09df;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/*Hover effect for the facebook icon*/
+.footer1 .footericons a:hover{
+    background-color: #6a37d2;  
+    color: #ffffff;
+}
+
+.footer1 .footerlinks a:hover{
+    color: #fff;
+}
+
+
+/*Shop page styles*/
+
+/*Header section styles*/
+#shopheader{
+    background-image: url(Pictures/shopbanners.jpg);
+    width: 100%;
+    height: 25vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    flex-direction: column;
+    padding: 14px;
+    color: #000000;
+}
+
+/*shop page product container styles*/
+
+#product1-shop{
+    text-align: center;
+}
+
+#product1-shop .pro-container-shop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-content: center;
+    padding-top: 20px ;
+    margin: 0 auto;
+}
+
+#product1-shop .pro-shop {
+    width: 24%;
+    min-width: 320px;
+    min-height: 300px;
+    padding: 10px 5px;
+    border: 1px solid #2f086e;
+    border-radius: 25px;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.1);
+    margin: 50px ;
+    transition: 0.2s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+#product1-shop .pro-container-shop a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+
+}
+
+/*Hover effect for the product container*/
+#product1-shop .pro-shop:hover{
+    box-shadow: 20px 20px 30px rgba(171, 62, 238, 0.269);
+}
+
+#product1-shop .pro-shop img{
+    width: 285px;
+    height: 200px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+/*shop page Product container text styles*/
+#product1-shop h1{
+    font-size: 22px;
+    color: #251c32;
+    margin: 0;
+}
+
+#product1-shop .des-shop span{
+    font-size: 15px;
+    font-family: cursive;
+    color: #4203a8;
+    margin: 0;
+}
+
+#product1-shop .des-shop i{
+    font-size: 18px;
+    color: #fdc433;
+}
+
+#product1-shop .des-shop h3{
+    padding-top: 10px;
+    color: black;
+    font-size: 18px;
+}
+
+#product1-shop .pro-shop .shopPGcart{
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    border-radius: 50px;
+    background-color:#9155f3;
+    font-weight: 500px;
+    color: white;
+    border: 1.5px solid #4203a8;
+    bottom: 20px;
+    cursor: pointer;
+
+}
+
+/*styles for the Banner on shop page*/
+#Custom{
+    background-image: url(Pictures/shopbanners2.jpg);
+    width: 100%;
+    height: 25vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    flex-direction: column;
+    padding: 14px;
+    color: #000000;
+}
+
+/*Banner text styles*/
+#Custom h1{
+    margin-bottom: 20px;
+}
+
+
+
+/*single product page*/
+
+#product_details{
+    display: flex;
+    background-color: #e2cdfd;
+    padding-bottom: 55px;
+    padding-top: 50px;
+}
+
+#product_details .single-pro-image{
+    width: 40%;
+    margin-right: 20px;
+}
+
+#product_details .single_pdetails{
+    width: 50%;
+    padding-top: 30px;
+
+}
+
+/*Product detail page text styles*/
+.single_pdetails h1{
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.single_pdetails h2{
+    font-size: 24px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #5e06eb;
+    margin-bottom: 5px;
+}
+
+/*product details page Board size selection*/
+#product_details .single_pdetails select{
+    display: block;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+}
+
+/*Product details page board quanity input*/
+#product_details .single_pdetails input{
+    width: 50px;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+/*product details page add to cart button*/
+.productPGbutton{
+    background-color: #b68ef7;
+    color: black ;
+    width: 150px;
+    height: 38px;
+    font-size: 16px;
+}
+
+/*Product detail page details sectios text styles*/
+.single_pdetails h3{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.single_pdetails span{
+    line-height: 20px;
+}
+
+#product1-shop .section1-head h1{
+    font-size: 35px;
+    background: linear-gradient(to right, rgb(216, 177, 246), rgb(144, 62, 227));
+    box-sizing: border-box;
+    height: 55px;
+    padding-top: 8px;
+}
+
+
+/*About page styles*/
+#aboutheader {
+    position: relative;
+    background-image: url(Pictures/aboutPBanner.jpg);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px 145px 20px 145px;
+    color: #ffffff;
+}
+
+/*about page header section text styles*/
+#aboutheader h1{
+    font-size: 35px;
+}
+
+#aboutheader h2{
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+#aboutheader::before {
+    content: "";  /*creates darker shaded text background*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /*Decides the color of the darker shaded backgroundf*/
+    z-index: 1;
+}
+
+/*about page header positioning*/
+#aboutheader > *{
+    position: relative;
+    z-index: 2; 
+}
+
+/*About page detail section background and text edits*/
+#about-head{
+    background: linear-gradient(to right, #ad84e1, #d0bfea);
+
+    text-align: center;
+    padding: 35px 75px 35px 75px;
+}
+#about-head h1{
+    font-size:28px ;
+}
+
+#about-head p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#about-head h2{
+    font-size:24px ;
+}
+
+/*Moving text edits*/
+#about-head marquee{
+    height: 30px;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    color: #4d04c3;
+    font-weight: bold;
+}
+
+/*about page Video styles*/
+#aboutvideo{
+    margin-top: 25px;
+    text-align: center;
+}
+
+#aboutvideo .video{
+    margin: 25px auto 0 auto;
+    height: 80%;
+    width: 58%;
+    border-radius: 20px;
+}
+
+#aboutvideo .video video{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    border-style:groove;
+    border-color: #6835bb;
+    border-width: 8px;
+}
+
+/*About page Contact details section*/
+#contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #bb95ec;
+    padding: 35px 35px 35px 35px ;
+}
+
+/*About page contact details section text styles*/
+#contact-details .details{
+    width: 40%;
+}
+
+#contact-details span{
+    color: white;
+}
+#contact-details h2{
+    font-size: 30px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contact-details p{
+    color: #000000;
+    font-size: 20px;
+    margin:0;
+}
+
+/*About page contact details section icon styles*/
+#contact-details i{
+    color: #ffffff;
+    font-size: 25px;
+    padding-right: 22px;
+}
+
+/*About page contact details section list styles*/
+#contact-details li{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+/*Google map styles*/
+#contact-details .map{
+    width: 55%;
+    height: 400px;
+
+}
+
+#contact-details .map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*T&C page*/
+.termsC{
+    font-family: Arial, sans-serif; 
+    line-height: 1.6;              
+    margin: 20px;                  
+    background-color: #f9f9f9;     
+    color: #333;
+}
+
+.termsC h1 {
+    font-size: 24px;
+    margin-top: 30px;          
+    margin-bottom: 20px;
+    color: #4d04c3;
+    text-align: center;         
+}
+
+.termsC  h2 {
+    font-size: 18px;               
+    margin-top: 20px;           
+    margin-bottom: 10px;    
+    color: #5624a7;        
+}
+
+.termsC ul {
+    margin-left: 20px;           
+}
+
+.termsC p {
+    margin-bottom: 15px;       
+}
+
+.termsC {
+    background: #fff;             
+    padding: 15px;                 
+    border-radius: 8px;            
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+
+/*Login page styles*/
+#login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    background-image: url(Pictures/loginBK.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: animateBg 15s linear infinite;
+
+}
+
+@keyframes animateBg {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+    
+}
+
+/*Login box*/
+.loginBox{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255, 255, 255.5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*login box text styles*/
+.loginBox h1{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+/*input box edits*/
+.lg-inputBox{
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid white;
+}
+
+.lg-inputBox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none ;
+    font-size: 15px;
+    color: white;
+    padding: 0 35px 0 5px;
+}
+
+/*icon edits*/
+.lg-inputBox .icon{
+    position: absolute;
+    right:25px;
+    color: white;
+    font-size: 15px;
+    line-height: 57px;
+}
+
+/*checkbox edits*/
+.remember-forget{
+    margin: -15px 0 15px;
+    font-size: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forget label input{
+    margin-right: 3px;
+}
+
+.remember-forget a{
+    color: white;
+    text-decoration: none;
+}
+
+.remember-forget a:hover{
+    text-decoration: underline;
+}
+
+/*login button edits*/
+.loginBox button{
+    width: 100%;
+    height: 40px;
+    background: #8153c9;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/*register link edits*/
+.register-link{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register-link p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*hover effect for register page link*/
+.register-link p a:hover{
+    text-decoration: underline;
+
+}
+
+/*Register page*/
+#registerpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    background: url(Pictures/registerBK.jpg);
+    overflow: hidden;
+}
+
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Add multiple shapes with different sizes and animation delays */
+.shape1 { width: 100px; height: 100px; top: 5%; left: 5%; animation-delay: 0s; }
+.shape2 { width: 120px; height: 120px; top: 15%; left: 40%; animation-delay: 0.2s; }
+.shape3 { width: 110px; height: 110px; top: 25%; right: 5%; animation-delay: 0.4s; }
+.shape4 { width: 90px; height: 90px; bottom: 10%; left: 10%; animation-delay: 0.6s; }
+.shape5 { width: 130px; height: 130px; top: 60%; right: 20%; animation-delay: 0.8s; }
+.shape6 { width: 150px; height: 150px; bottom: 20%; left: 30%; animation-delay: 1s; }
+.shape7 { width: 80px; height: 80px; top: 70%; left: 60%; animation-delay: 1.2s; }
+.shape8 { width: 140px; height: 140px; top: 40%; right: 40%; animation-delay: 1.4s; }
+.shape9 { width: 160px; height: 160px; bottom: 30%; left: 50%; animation-delay: 1.6s; }
+.shape10 { width: 100px; height: 100px; top: 80%; left: 20%; animation-delay: 1.8s; }
+.shape11 { width: 120px; height: 120px; top: 55%; right: 10%; animation-delay: 2s; }
+.shape12 { width: 110px; height: 110px; bottom: 10%; right: 5%; animation-delay: 2.2s; }
+.shape13 { width: 100px; height: 100px; top: 20%; left: 10%; animation-delay: 2.4s; }
+.shape14 { width: 90px; height: 90px; top: 40%; left: 5%; animation-delay: 2.6s; }
+.shape15 { width: 110px; height: 110px; top: 60%; left: 15%; animation-delay: 2.8s; }
+
+
+.register-box{
+    margin-top: -65px;
+    width: 750px;
+    background: #8152cc;
+    border-radius: 10px;
+    color: white;
+    z-index: 3;
+}
+
+.register-content {
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 2;
+}
+.register-box h1{
+    margin-top: 22px;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-box .input-B{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.register-box .input-F{
+    position: relative;
+    width: 50%;
+    min-height: 70%;
+    margin: 13px 0;
+}
+
+.register-box .input-F input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid black;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    border-radius: 6px;
+    padding: 15px 15px 15px 40px;
+}
+
+.register-box .input-F input::placeholder{
+    color: #ffffff;
+
+}
+
+.register-box .input-F i{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.register-box .register-btn{
+    width: 100%;
+    height: 45px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(83, 16, 185);
+    font-weight: 600;
+}
+
+
+/*Cart page*/
+#cart-header{
+    background: url(Pictures/shopbanners2.jpg);
+    width: 100%;
+    height: 15vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    flex-direction: column;
+    padding: 14px;
+    color: #000000;
+}
+
+#cart-table{
+    place-items: center;
+}
+#cart-table table{
+    width: 90%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+#cart-table table td input{
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background-color: rgb(220, 63, 63); 
+    color: rgb(194, 227, 26);
+    border: none; 
+    border-radius: 1px;
+    padding: 7px 14px;
+    font-size: 8px;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+#cart-table table thead{
+    border: 1px solid #9063da;
+    border-left: none;
+    border-right: none;
+}
+
+#cart-table table thead td{
+    font-weight: 700;
+    text-decoration: uppercase;
+    font-size: 15px;
+    padding: 15px 0;
+}
+
+#cart-table table tbody tr td{
+    padding-top: 15px;
+}
+
+#cart-table table tbody td{
+    font-size: 14px ;
+}
+
+#checkout{
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+}
+
+#checkout-box{
+    width: 45%;
+    margin-bottom: 30px;
+    border: 1px solid #5624a7;
+    padding: 30px;
+    place-items: center;
+}
+
+#checkout-box table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+#checkout-box table td{
+    width: 50%;
+    border: 1px solid #4d04c3;
+    padding: 10px;
+    font-size: 15px;
+}
+
+#checkout-box button{
+    background-color: #8f64d4;
+    color: #000000;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/*Account page*/
+.account-page {
+    font-family: Arial, sans-serif;
+    background-image: url('Pictures/accountBK.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+.accountpg-container{
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.80);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+.accountpg-container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accountpg-container h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.accountpg-container .logout-btn {
+    padding: 10px 15px;
+    background-color: #6612ed;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accountpg-container.user-info, .accountpg-container .order-history {
+    margin-top: 20px;
+}
+
+.accountpg-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.accountpg-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.accountpg-container label {
+    margin-bottom: 5px;
+}
+
+.accountpg-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.accountpg-container .save-btn {
+    padding: 10px 15px;
+    background-color: #6c3db9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.accountpg-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.accountpg-container th, .accountpg-container td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.accountpg-container th {
+    background-color: #f8f9fa;
+}
+
+
+/* cart .php css */
+
+
+.cart td{
+    padding:10px 20px
+}
+.cart td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+
+}

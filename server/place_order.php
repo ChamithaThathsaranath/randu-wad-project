@@ -31,6 +31,27 @@ if(isset($_POST['place_order'])){
 
 
     //2.get products from cart(from session)
+
+    
+    foreach($_SESSION['cart'] as $key => $value){
+
+        $product = $_SESSION['cart'] [$key];
+        $product_id = $product['product_id'];
+        $product_name = $product['product_name'];
+        $product_image = $product['product_image'];
+        $product_price = $product['product_price'];
+        $product_quantity = $product['product_quantity'];
+
+        $stmt1=$connect->prepare("INSERT INTO order_items (order_id,product_id,product_name,product_image,product_price,product_quantity,user_id,order_date	
+                            ) VALUES  (?,?,?,?,?,?,?,?) ");
+
+        $stmt1->bind_param('iissiiis',$order_id,$product_id,$product_name,$product_image,$product_price,$product_quantity,$user_id,$order_date);
+        $stmt1->execute();
+        echo "your are success";
+        
+    }
+
+
     //3.issue new order and store orderinfo in database
     //4.store each single item in ordrr items database
     //5 remove everything from cart

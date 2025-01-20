@@ -1,7 +1,10 @@
 
 <?php 
+
         //if user not logging and try to come dirrecr account page this is how user can sea
         session_start();
+        include('server/connection.php');
+        
 
         if (!isset($_SESSION['logged_in'])) {
             header('Location:login.php');
@@ -12,6 +15,22 @@
             
 
             
+}
+
+
+//get orders
+
+if(isset($_SESSION['logged_in'])){
+
+
+    $user_id = $_SESSION['user_id'];
+    $stmt=$connect->prepare("SELECT * FROM orders WHERE user_id = ? ");
+
+    $stmt->bind_param('i',$user_id);
+
+$stmt->execute();
+
+$orders = $stmt->get_result();
 }
 
 
@@ -84,24 +103,33 @@
                 <thead>
                     <tr>
                         <th>Order ID</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Total</th>
+                        <th>order cost</th>
+                        <th>Order Status</th>
+                        <th>date</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>#001</td>
-                        <td>2023-10-01</td>
-                        <td>Shipped</td>
-                        <td>$50.00</td>
-                    </tr>
-                    <tr>
-                        <td>#002</td>
-                        <td>2023-09-15</td>
-                        <td>Delivered</td>
-                        <td>$75.00</td>
-                    </tr>
+
+                    <?php   while($row=$orders->fetch_assoc()){ ?>
+
+
+
+
+
+
+
+
+
+
+                                <tr>
+                                    <td> <?php echo $row['order_id'];  ?></td>
+                                    <td><?php echo $row['order_cost'];  ?></td>
+                                    <td><?php echo $row['order_status'];  ?></td>
+                                    <td><?php echo $row['order_date'];  ?></td>
+                                </tr>
+                                
+
+                                <?php } ?>
                 </tbody>
             </table>
         </section>

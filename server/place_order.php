@@ -23,6 +23,8 @@ if(isset($_POST['place_order'])){
         $stmt->bind_param('isiisss',$order_cost,$order_status,$user_id,$phone,$city,$address,$order_date);
         $stmt->execute();
 
+        //2.issue new order and store orderinfo in database
+
         $order_id = $stmt->insert_id;
         echo $order_id;
 
@@ -30,7 +32,7 @@ if(isset($_POST['place_order'])){
 
 
 
-    //2.get products from cart(from session)
+    //3.get products from cart(from session)
 
     
     foreach($_SESSION['cart'] as $key => $value){
@@ -42,20 +44,26 @@ if(isset($_POST['place_order'])){
         $product_price = $product['product_price'];
         $product_quantity = $product['product_quantity'];
 
+  //4.store each single item in ordrr items database
+
         $stmt1=$connect->prepare("INSERT INTO order_items (order_id,product_id,product_name,product_image,product_price,product_quantity,user_id,order_date	
                             ) VALUES  (?,?,?,?,?,?,?,?) ");
 
         $stmt1->bind_param('iissiiis',$order_id,$product_id,$product_name,$product_image,$product_price,$product_quantity,$user_id,$order_date);
         $stmt1->execute();
-        echo "your are success";
+        
         
     }
 
 
-    //3.issue new order and store orderinfo in database
-    //4.store each single item in ordrr items database
-    //5 remove everything from cart
+    
+   
+    //5 remove everything from cart--delay until patment is done
+
+
     //6.inform user whether everything is finne or there is problem
+
+    header('location:../payment.php?order_status=Order placed successfully ');
 
 }
 

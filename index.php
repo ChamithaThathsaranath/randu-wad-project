@@ -37,7 +37,7 @@
             <div class="backgroundimage"></div>
          
         <section id="homepg">
-            <h1>"Your Premier Partner"</h1>
+            <h1>"chamitha thathsaranath this is your working environtment of second branch"</h1>
             <h2>For Advertising signs & Boards </h2>
             <br>
             <p>At Grafix Adz, we specialize in creating high-quality advertising signs and boards that make your business stand out.</p>
@@ -82,38 +82,73 @@
 
 
                 
-<!-- $$$$$$$$$ in this section create product ass a data base connected resource. -->
-
-
-
-
-
-            <?php include('server/get_featured_products.php');?>
-
-            <?php while($raw=$featured_product->fetch_assoc()) {?>         <!-- $$$$$$$this is array repeation work ass databass connected repeating product -->
-
-
-                
-
-
             <div class="pro-container">
                 <div class="pro">
-                    <h1><?php echo $raw['product_name'] ?> </h1><br>
-                    <img src="Pictures/<?php echo $raw['product_image'] ?>" alt="">
+                    <h1>Billboards</h1><br>
+                    <img src="Pictures/billboard.jpg" alt="">
                     <br><br>
                     <div class="des">
-                        <p><?php echo $raw['product_description'] ?></p>
+                        <p>Capture attention with our high-impact billboards and hoardings. 
+                            We handle everything from concept and design to production and installation, 
+                            ensuring your message stands tall in prime locations.</p>
                     </div>
                 </div>
-                <?php } ?>
-                
 
+                <div class="pro">
+                    <h1>Business Signage</h1><br>
+                    <img src="Pictures/businesssignage.jpg" alt="">
+                    <br><br>
+                    <div class="des">
+                        <p>Make a strong first impression with our custom business signage solutions. 
+                            Whether it’s for storefronts, offices, or retail spaces, we create signs 
+                            that reflect your brand’s personality and professionalism.</p>
+                    </div>
+                </div>
 
+                <div class="pro">
+                    <h1>Digital Display Boards</h1><br>
+                    <img src="Pictures/digitaldisplay.jpeg" alt="">
+                    <br><br>
+                    <div class="des">
+                        <p>
+                            Light up your brand with our LED and digital display boards. 
+                            Perfect for high-traffic areas, these vibrant, 
+                            energy-efficient boards deliver your message day and night, 
+                            creating dynamic visual experiences.</p>
+                    </div>
+                </div>
 
+                <div class="pro">
+                    <h1>Name boards</h1><br>
+                    <img src="Pictures/nameboards.jpg" alt="">
+                    <br><br>
+                    <div class="des">
+                        <p>Add a touch of elegance to your business with our bespoke nameboards. 
+                            Crafted with precision and available in various styles and materials, 
+                            these boards are perfect for businesses, homes, and institutions.</p>
+                    </div>
+                </div>
 
+                <div class="pro">
+                    <h1>Vehicle Branding</h1><br>
+                    <img src="Pictures/vehiclebranding.jpg" alt="">
+                    <br><br>
+                    <div class="des">
+                        <p>Vehicle Branding
+                            Turn your vehicles into mobile billboards with our vehicle branding and wrapping services. 
+                            We design and install eye-catching graphics that turn every drive into a marketing opportunity.</p>
+                    </div>
+                </div>
 
-
-        
+                <div class="pro">
+                    <h1>Banners</h1><br>
+                    <img src="Pictures/banners.jpg" alt="">
+                    <br><br>
+                    <div class="des">
+                        <p>Promote your business, events, or special offers with our high-quality banners and posters. 
+                            Available in various sizes, materials, and designs, they are perfect for both indoor and outdoor use.</p>
+                    </div>
+                </div>
             </div>
             
         </section>

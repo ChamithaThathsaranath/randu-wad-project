@@ -37,7 +37,7 @@
             <div class="backgroundimage"></div>
          
         <section id="homepg">
-            <h1>"chamitha thathsaranath this is your working environtment of second branch"</h1>
+            <h1>"Your premer add partner"</h1>
             <h2>For Advertising signs & Boards </h2>
             <br>
             <p>At Grafix Adz, we specialize in creating high-quality advertising signs and boards that make your business stand out.</p>

@@ -37,7 +37,7 @@
             <div class="backgroundimage"></div>
          
         <section id="homepg">
-            <h1>"Your Premier Partner"</h1>
+            <h1>"chamitha thathsaranath"</h1>
             <h2>For Advertising signs & Boards </h2>
             <br>
             <p>At Grafix Adz, we specialize in creating high-quality advertising signs and boards that make your business stand out.</p>
